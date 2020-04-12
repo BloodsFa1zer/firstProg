@@ -8,96 +8,81 @@ import java.nio.file.*;
 import java.io.IOException;
 import java.util.*;
 import java.util.List;
-
-
-
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 class Main {
 
-    public static void main(String[] args) throws Exception {
-        File f1 = new File("txt");
+        public static void main(String[] args) {
 
-        BufferedReader br = new BufferedReader(new FileReader(f1));
-        String s;
-        List lines = Files.readAllLines(Paths.get("res/file.txt"));
-        Files.write(Paths.get("res/file.txt"), lines);
-        while ((s = br.readLine()) != null) {
-            if (s.indexOf('W') == 0) {
-                String replace = s.replace('W', 'w');
-                System.out.println(replace);
-            }
+                      /*          System.out.println(getAllNumbers("data 48 call 9 read13 blank0a"));
+                        }
+                        public static String getAllNumbers(String text){
+                                Pattern pattern = Pattern.compile("(\\d+)");
+                                int j = 0;
+                                Matcher matcher = pattern.matcher(text);
+                                int a[] = new int[(int) pattern.matcher(text).results().count()];
+                                while (matcher.find()) {
+                                        int i = Integer.parseInt(text.substring(matcher.start(), matcher.end())) * 2;
+                                        a[j] = i;
+                                        j++;
+                                }
+                                return Arrays.toString(a);*/
+                        }
+                }
+              /*  Rectangle r1 = new Rectangle("purple",100,100);
+                Rectangle r2 = new Rectangle("purple",100,100);
+                System.out.println( r1.equals(r2));
+                System.out.println( r2.equals(r1));
+                System.out.println( (r1.hashCode() == r2.hashCode()));*/
+             /*   Scanner src = new Scanner(System.in);
+                int num1 = 1;
+                int num2 = 1;
+                int num = src.nextInt();
+                int numOfFibonachi;
+                int i = 0;
+                while (i <= num) {
+                        numOfFibonachi = num1 + num2;
+                        num1 = num2;
+                        num2 = numOfFibonachi;
+                        if (i == num) {
+                                System.out.println(numOfFibonachi);
+                        }
+                        i++;
+                }*/
         }
-    }
-}
-
-        /*class FileWork {
-            public static final int  KEY_FOR_SEARCH_WORDS = 'w';
-
-            public String[] readFromFile(String fileName) {
-
-
-                String[] empty = new String[0];
-                List<String> lines = null;
-                try {
-                    lines = Files.readAllLines(Paths.get(fileName));
-                } catch (IOException e) {
-                    e.getMessage();
-                }
-                if (lines.size() == 0) {
-
-                    return empty;
-                }
-                String oneSmallLineOfAllWords = lines.toString().toLowerCase()
-                        .replaceAll("[^a-zA-Z]+", " ");
-
-                String[] linesToArrayString = oneSmallLineOfAllWords.trim().split(" ");
-                Arrays.sort(linesToArrayString);
-
-                int counter = 0;
-                StringBuilder words = new StringBuilder();
-                for (int i = 0; i < linesToArrayString.length; i++) {
-                    if (linesToArrayString[i].charAt(0) == KEY_FOR_SEARCH_WORDS) {
-                        words.append(linesToArrayString[i] + " ");
-                        counter++;
-                    }
-                }
-                String[] returnedWords = words.toString().trim().split(" ");
-
-                if (counter == 0) {
-
-                    return empty;
-                }
-                return returnedWords;
-            }
+}        //numOfFibonachi = num1 + num2;
+        // num1 = num2;
+        // num2 = numOfFibonachi;
+        // numOfFibonachi = num1 + num2;
+       /* if(num==0){
+            System.out.println("Ваше число по системе Фабоначчи: " + 1);
+        }
+        if(num==1){
+            System.out.println("Ваше число по системе Фабоначчи: " + 1);
+        }
+        if(num==2){
+            System.out.println("Ваше число по системе Фабоначчи: " + 2);
+        }
+        if(num==3){
+            System.out.println("Ваше число по системе Фабоначчи: " + 3);
+        }
+        if(num==4){
+            System.out.println("Ваше число по системе Фабоначчи: " + 5);
+        }
+        if(num==5){
+            System.out.println("Ваше число по системе Фабоначчи: " + 8);
+        }
+        if(num==6){
+            System.out.println("Ваше число по системе Фабоначчи: " + 13);
+        }
+        if(num==7){
+            System.out.println("Ваше число по системе Фабоначчи: " + 21);
+        }
+        if(num==8){
+            System.out.println("Ваше число по системе Фабоначчи: " + 34);
         }*/
 
 
-      /*  Car c = new Car(4, 3, "SINAbooba", "G100000505", "red");
-        Car clone1 = (Car) c.clone();
-        Engine e = new Engine(29, "hukihih", "Eojijoi221213", 300, 60);
-        Engine clone2 = (Engine) e.clone2();
 
-
-        System.out.println(clone1);
-
-        System.out.println(clone2);
-
-        clone1.model = new String("GIBABOBA");
-        clone2.markaMashini = new String("oijojo");
-
-
-        System.out.println(clone1);
-
-        System.out.println(clone2);*/
-
-
-/*Plane plane = new Plane.Builder()
-        .withName("LITACHOK")
-        .withdateProizvdotsva(2222200)
-        .withAge(-111111)
-        .withkolichestvoKoles(76498)
-        .withstranaProizdatsva("Konoxa")
-        .withcolor("sero-buro-makinoviy")
-        .build();
-Plane.Builder p1 = new Plane.Builder();*/
