@@ -51,8 +51,8 @@ class Main {
                         }
                         i++;
                 }*/
-        }
-}        //numOfFibonachi = num1 + num2;
+
+  //numOfFibonachi = num1 + num2;
         // num1 = num2;
         // num2 = numOfFibonachi;
         // numOfFibonachi = num1 + num2;

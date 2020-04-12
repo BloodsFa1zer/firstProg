@@ -10,7 +10,7 @@ public class Rectangle {
             return true;
         }
 
-        if (obj == null || obj.getClass() != this.getClass()) {
+        if (obj == null ) {
             return false;
 
 
